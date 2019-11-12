@@ -6,10 +6,11 @@ class TicTacToe
     9.times do 
       @board.push(" ")
     end 
+    @board
   end
   
   def display_board
-    puts "#{board[0]} | #{board[1]} | #{ board[2]} \n ----------- \n #{board[3]} | #{board[4]} | #{board[5]} \n----------- \n #{board[6]} | #{board[7]} | #{board[8]
+    puts "#{@board[0]} | #{@board[1]} | #{ @board[2]} \n ----------- \n #{@board[3]} | #{@board[4]} | #{@board[5]} \n----------- \n #{@board[6]} | #{@board[7]} | #{@board[8]
   end
   
   def input_to_index(user_input)
@@ -18,12 +19,12 @@ class TicTacToe
   end
   
   def move(index, token = "X")
-    board[index] = token
+    @board[index] = token
   end 
   
   def position_taken?(index)
     result = true
-    if board[index] == " "
+    if @board[index] == " "
       result = false 
     end 
     result
@@ -31,11 +32,17 @@ class TicTacToe
     
   def valid_move?(position)
     valid = false 
-    if position >= 0 && position < board.length && board[position] == " "
+    if position >= 0 && position < @board.length && @board[position] == " "
       valid = true 
     end 
     valid 
   end
+  
+  def turn_count
+    @board.count{|index| index != " "}
+  end
+  
+  
   
   def turn 
     input = gets.chomp
