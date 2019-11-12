@@ -73,9 +73,11 @@ class TicTacToe
     o_positions = []
     @board.each_with_index do |token, index|
       if token == "X"
+        p x_positions
         x_positions << index
       end
       if token == "O" 
+        p o_positions
         o_positions << index 
       end 
     end
