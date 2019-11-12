@@ -70,10 +70,12 @@ class TicTacToe
   end
   
   def won?
-    
-    new_board_array = @board.each_slice(0,2)
+    new_board_array = @board.each_slice(3).to_a
     WIN_COMBINATIONS.each do |win_state|
-      if @board.find{|
+      if new_board_array.find{|array| array == win_state}
+        return array
+      end
+    end
   
 #  def construct_win_conditions
 #    board.each do |
