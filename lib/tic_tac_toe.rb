@@ -56,7 +56,7 @@ class TicTacToe
   
   def turn 
     puts "To start, choose the place on the grid where you want to play (input a number between 1 and 9)"
-    input = gets.chomp
+    input = gets
     index = input_to_index(input)
     token = current_player
     if valid_move?(index)
