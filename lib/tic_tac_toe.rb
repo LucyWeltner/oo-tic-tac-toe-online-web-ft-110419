@@ -12,7 +12,8 @@ class TicTacToe
     puts "#{board[0]} | #{board[1]} | #{ board[2]} \n #{board[3]} | #{board[4]} | #{board[5]} \n #{board[6]} | #{board[7]} | #{board[8]
   end
   
-  def input_to_index
+  def input_to_index(user_input)
+    
   
 #  def construct_win_conditions
 #    board.each do |
