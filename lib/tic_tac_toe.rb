@@ -74,8 +74,11 @@ class TicTacToe
     WIN_COMBINATIONS.each do |win_state|
       if new_board_array.find{|array| array == win_state}
         return array
+      else 
+        return nil 
       end
     end
+  end
   
 #  def construct_win_conditions
 #    board.each do |
