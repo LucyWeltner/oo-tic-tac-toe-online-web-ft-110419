@@ -84,11 +84,11 @@ class TicTacToe
       all_players.each do |array1|
         win_state.each do |index| 
           winning_indices = array1.find_all{|index1| array1.include?(index)}
-          p winning_indices
           if winning_indices.length == 3
             return win_state
           end
         end
+      p winning_indices
       winning_indices = []
       end
     end
