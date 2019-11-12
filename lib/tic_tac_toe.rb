@@ -54,8 +54,6 @@ class TicTacToe
     player
   end
   
-  
-  
   def turn 
     puts "To start, choose the place on the grid where you want to play (input a number between 1 and 9)"
     input = gets.chomp
@@ -70,14 +68,21 @@ class TicTacToe
   end
   
   def won?
-    index_map = []
-    @board.each_with_index do |token, index| 
-      index_map << index
+    all_players = []
+    x_positions = []
+    o_positions = []
+    @board.each_with_index do |token, index|
+      if token == "X"
+        x_positions << index
+      end
+      if token == "O" 
+        o_positions << index 
+      end 
     end
-    new_board_array = index_map.each_slice(3).to_a
-    p new_board_array
+    x_positions << all_players 
+    o_positions << all_players
     WIN_COMBINATIONS.each do |win_state|
-      if new_board_array.find{|array| array == win_state}
+      if all_players.find{|array| array == win_state}
         p array
         return array
       else 
