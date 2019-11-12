@@ -114,11 +114,12 @@ class TicTacToe
   
   def winner
     if won?
-      return won?[0]
+      return @board[won?[0]]
     else 
       return false
     end
   end
+  
   
 #  def construct_win_conditions
 #    board.each do |
