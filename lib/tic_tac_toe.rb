@@ -81,8 +81,32 @@ class TicTacToe
   end
   
   def full?
-    @board.all?
-    
+    @board.all?{|space| space == "X" || space == "O"}
+  end
+  
+  def draw?
+    draw = false 
+    if full? && !won?
+      draw = true 
+    end 
+    draw 
+  end
+  
+  def over?
+    over = false 
+    if draw? || won?
+      over = true 
+    end 
+    over 
+  end 
+  
+  def winner
+    if won?
+      return won?[0]
+    else 
+      return false
+    end
+  end
   
 #  def construct_win_conditions
 #    board.each do |
