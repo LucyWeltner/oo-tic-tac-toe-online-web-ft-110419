@@ -83,8 +83,6 @@ class TicTacToe
     WIN_COMBINATIONS.each do |win_state|
       all_players.each do |array1|
         if win_state.all?{|index| array1.include?(index)}
-          p win_state 
-          p array1
           return win_state
         end
       end
@@ -116,7 +114,7 @@ class TicTacToe
     if won?
       return @board[won?[0]]
     else 
-      return false
+      return nil
     end
   end
   
