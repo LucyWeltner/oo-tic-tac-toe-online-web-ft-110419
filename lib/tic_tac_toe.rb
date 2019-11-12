@@ -37,6 +37,15 @@ class TicTacToe
   end
   
   def turn 
+    input = gets.chomp
+    index = input_to_index(input)
+    if valid_move?(index)
+      move(index, token)
+      display_board
+    else
+      turn
+    end
+  end
   
 #  def construct_win_conditions
 #    board.each do |
