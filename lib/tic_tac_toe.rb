@@ -119,7 +119,7 @@ class TicTacToe
   end
   
   def play
-    is_over = false
+    is_over = over?
     while !is_over do
       turn
       is_over = over?
