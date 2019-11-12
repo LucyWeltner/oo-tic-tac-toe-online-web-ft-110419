@@ -89,6 +89,7 @@ class TicTacToe
             return win_state
           end
         end
+      winning_indices = []
       end
     end
     return nil
