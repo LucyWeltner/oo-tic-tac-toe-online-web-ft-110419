@@ -86,7 +86,8 @@ class TicTacToe
           winning_indices = array1.find_all{|index1| array1.include?(index)}
           p winning_indices
           if winning_indices.length == 3
-          return win_state
+            return win_state
+          end
         end
       end
     end
