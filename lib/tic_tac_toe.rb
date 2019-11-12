@@ -70,6 +70,7 @@ class TicTacToe
   end
   
   def won?
+    new_board_array = 
     WIN_COMBINATIONS.each do |win_state|
       if @board.find{|
   
