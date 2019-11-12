@@ -71,6 +71,7 @@ class TicTacToe
     all_players = []
     x_positions = []
     o_positions = []
+    winning_indices = []
     @board.each_with_index do |token, index|
       if token == "X"
         x_positions << index
