@@ -86,6 +86,7 @@ class TicTacToe
     p all_players
     WIN_COMBINATIONS.each do |win_state|
       if all_players.find{|array1| array1.include?(win_state)}
+        p all_players
         return array1
       else 
         return nil 
