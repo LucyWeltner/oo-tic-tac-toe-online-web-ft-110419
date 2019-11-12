@@ -69,6 +69,10 @@ class TicTacToe
     end
   end
   
+  def won?
+    WIN_COMBINATIONS.each do |win_state|
+      if @board.find{|
+  
 #  def construct_win_conditions
 #    board.each do |
 #      board.each do 
