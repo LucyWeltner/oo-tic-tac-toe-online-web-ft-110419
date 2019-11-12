@@ -125,7 +125,7 @@ class TicTacToe
       is_over = over?
     end
     if draw?
-      puts, "The game ended in a draw"
+      puts "The game ended in a draw"
     end 
     if won?
       puts "Congratulations, #{winner}"
