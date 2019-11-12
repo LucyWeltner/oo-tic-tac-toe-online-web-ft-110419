@@ -13,7 +13,30 @@ class TicTacToe
   end
   
   def input_to_index(user_input)
+    board[user_input.to_i - 1]
+  end
+  
+  def move(index, token = "X")
+    board[index] = token
+  end 
+  
+  def position_taken?(index)
+    result = true
+    if board[index] == " "
+      result = false 
+    end 
+    result
+  end
     
+  def valid_move?(position)
+    valid = false 
+    if position >= 0 && position < board.length && board[position] == " "
+      valid = true 
+    end 
+    valid 
+  end
+  
+  def turn 
   
 #  def construct_win_conditions
 #    board.each do |
