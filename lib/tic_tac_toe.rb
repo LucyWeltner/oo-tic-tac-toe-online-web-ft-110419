@@ -81,10 +81,10 @@ class TicTacToe
     end
     x_positions << all_players 
     o_positions << all_players
+    p all_players
     WIN_COMBINATIONS.each do |win_state|
-      if all_players.find{|array| array == win_state}
-        p array
-        return array
+      if all_players.find{|array1| array1 == win_state}
+        return array1
       else 
         return nil 
       end
