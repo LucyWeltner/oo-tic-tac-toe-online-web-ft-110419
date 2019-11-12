@@ -80,6 +80,10 @@ class TicTacToe
     end
   end
   
+  def full?
+    @board.all?
+    
+  
 #  def construct_win_conditions
 #    board.each do |
 #      board.each do 
