@@ -71,7 +71,6 @@ class TicTacToe
     all_players = []
     x_positions = []
     o_positions = []
-    winning_indices = []
     @board.each_with_index do |token, index|
       if token == "X"
         x_positions << index
@@ -84,11 +83,10 @@ class TicTacToe
     WIN_COMBINATIONS.each do |win_state|
       all_players.each do |array1|
         if win_state.all?{|index| array1.include?(index)}
+          p win_state 
+          p array1
           return win_state
         end
-      end
-      p winning_indices
-      winning_indices = []
       end
     end
     return nil
