@@ -118,19 +118,19 @@ class TicTacToe
     end
   end
   
-  #def play
-  #  is_over = false
-  #  while !is_over do
-  #    turn
-  #    is_over = over?
-  #  end
-  #  if draw?
-  #    puts "Cat's Game!"
-  #  end 
-  #  if won?
-  #    puts "Congratulations #{winner}"
-  #  end 
-  #end
+  def play
+    is_over = false
+    while !is_over do
+      turn
+      is_over = over?
+    end
+    if draw?
+      puts "Cat's Game!"
+    end 
+    if won?
+      puts "Congratulations #{winner}"
+    end 
+  end
   
   
 end
