@@ -42,6 +42,14 @@ class TicTacToe
     @board.count{|index| index != " "}
   end
   
+  def current_player
+    player = "O"
+    if turn_count%2 == 0 
+      player = "X"
+    end 
+    player
+  end
+  
   
   
   def turn 
