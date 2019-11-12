@@ -118,25 +118,19 @@ class TicTacToe
     end
   end
   
-  def play
-    is_over = false
-    while !is_over do
-      turn
-      is_over = over?
-    end
-    if draw?
-      puts "The game ended in a draw"
-    end 
-    if won?
-      puts "Congratulations, #{winner}"
-    end 
-  end
-    
-  
-#  def construct_win_conditions
-#    board.each do |
-#      board.each do 
-#        board.map do
+  #def play
+  #  is_over = false
+  #  while !is_over do
+  #    turn
+  #    is_over = over?
+  #  end
+  #  if draw?
+  #    puts "Cat's Game!"
+  #  end 
+  #  if won?
+  #    puts "Congratulations #{winner}"
+  #  end 
+  #end
   
   
 end
