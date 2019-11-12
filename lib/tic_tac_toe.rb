@@ -119,9 +119,18 @@ class TicTacToe
   end
   
   def play
-    over = false
-    while !over? do
+    is_over = false
+    while !is_over do
       turn
+      is_over = over?
+    end
+    if draw?
+      puts, "The game ended in a draw"
+    end 
+    if won?
+      puts "Congratulations, #{winner}"
+    end 
+  end
     
   
 #  def construct_win_conditions
