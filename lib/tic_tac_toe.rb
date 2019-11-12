@@ -63,7 +63,7 @@ class TicTacToe
       move(index, token)
       display_board
     else
-      turn
+      input = gets
     end
   end
   
