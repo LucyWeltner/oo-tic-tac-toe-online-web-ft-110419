@@ -118,6 +118,11 @@ class TicTacToe
     end
   end
   
+  def play
+    over = false
+    while !over? do
+      turn
+    
   
 #  def construct_win_conditions
 #    board.each do |
