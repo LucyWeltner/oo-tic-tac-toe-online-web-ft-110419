@@ -70,7 +70,8 @@ class TicTacToe
   end
   
   def won?
-    index_map = @board.map_with_index {|token, index| index} 
+    index_map = []
+    @board.each_with_index {|token, index| index_map << index} 
     new_board_array = index_map.each_slice(3).to_a
     p new_board_array
     WIN_COMBINATIONS.each do |win_state|
