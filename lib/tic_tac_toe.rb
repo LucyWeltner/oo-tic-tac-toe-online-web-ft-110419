@@ -88,10 +88,9 @@ class TicTacToe
       if all_players.find{|array1| array1.include?(win_state)}
         p all_players
         return array1
-      else 
-        return nil 
       end
     end
+    return nil
   end
   
   def full?
